@@ -29,6 +29,8 @@
 	}
 	
 // }
+
+
 var Letter = function(letterGuess) {
 	this.value = letterGuess;
 	this.hasBeenGuessed = false;
@@ -44,6 +46,6 @@ var Letter = function(letterGuess) {
 		}}
 
 	};
-
+module.exports(Letter);
 
 

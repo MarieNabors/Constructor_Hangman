@@ -1,7 +1,18 @@
+require("letter.js")
+
+var wordOptions = ["love", "joy", "peace", "patience", "kindness", "goodness", "faithfulness",
+ "gentleness", "selfcontrol"];
+
 Word{
-	letters: [letter];
+	letters: [wordOptions];
 	getWord: function(){
 		var strWord;
+		var step;
+for (wordOptions[i] = 0; wordOptions.length; i++) {
+  //loops through word list
+ var randomWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+
+}
 		//loop through letters
 		strWord += letters[i].displayValue();
 		return strWord
