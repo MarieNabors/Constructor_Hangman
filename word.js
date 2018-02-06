@@ -1,15 +1,5 @@
 var Letter = require("letter.js")
-
-
-// function Person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-// }
-
-
- function Word(chosenWord) {
+function Word(chosenWord) {
 	this.letters:function(){
 		new Letter[chosenWord];
 		var lettersArray = []
@@ -29,10 +19,8 @@ for (var i = 0; i<this.letters.length; i++){
 (var str = "" + this.letters[i].displayValue) 
 return displayValue;
 } 
-
   //loops through word list
  var randomWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
-
 }
 		//loop through letters
 		strWord += letters[i].displayValue();
@@ -43,6 +31,7 @@ return displayValue;
 			getWord();
 		}
 		}
+
 	}
 
 //remember, you can access letters in an array when you use "array notation"
