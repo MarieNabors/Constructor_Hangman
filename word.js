@@ -1,13 +1,35 @@
-require("letter.js")
+var Letter = require("letter.js")
 
 
+// function Person(first, last, age, eye) {
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eye;
+// }
 
-Word{
-	letters: [wordOptions];
-	getWord: function(){
+
+ function Word(chosenWord) {
+	this.letters:function(){
+		new Letter[chosenWord];
+		var lettersArray = []
+		var array = chosenWord.split("");
+		for (var i = 0; i<array.length; i++){
+			lettersArray.push( new Letter(array[i]));
+		}
+		return lettersArray;
+	} 
+	this.getWord: function(){
+		//loop through this.letters
+		//call displayValue function on each letter
+		//concatonate those letters together into one string
 		var strWord;
 		var step;
-for (wordOptions[i] = 0; wordOptions.length; i++) {
+for (var i = 0; i<this.letters.length; i++){
+(var str = "" + this.letters[i].displayValue) 
+return displayValue;
+} 
+
   //loops through word list
  var randomWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
 
