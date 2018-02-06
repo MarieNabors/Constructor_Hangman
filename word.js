@@ -1,6 +1,6 @@
 var Letter = require("letter.js")
 function Word(chosenWord) {
-	this.letters:function(){
+	this.letters = function(){
 		new Letter[chosenWord];
 		var lettersArray = []
 		var array = chosenWord.split("");
@@ -9,7 +9,7 @@ function Word(chosenWord) {
 		}
 		return lettersArray;
 	} 
-	this.getWord: function(){
+	this.getWord = function(){
 		//loop through this.letters
 		//call displayValue function on each letter
 		//concatonate those letters together into one string
