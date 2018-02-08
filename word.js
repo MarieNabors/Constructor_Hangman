@@ -1,44 +1,66 @@
+//require letter.js
 var Letter = require("./letter.js")
-function Word(chosenWord) {
-	this.letters = function(){
-		// new Letter[chosenWord];
-		var lettersArray = []
-		var array = chosenWord.split("");
-		for (var i = 0; i<array.length; i++){
-			lettersArray.push( new Letter(array[i]));
-		}
-		return lettersArray;
-	} 
-	this.getWord = function(){
-		//loop through this.letters
+
+//constructor, capital letter, creates array of letters from chosenWord
+var Word =function(chosenWord) {
+	//takes randomly selected word and puts it ito Word constructor
+	
+		// empty lettersArray to be populated by Word constructor
+		this.lettersArray = [];
+
+		this.array = [];
+		//chosenWord.split("");
+		this.splitArray = [];
+
+		this.splitFunction = function(chosenWord){
+			//var random = chosenWord.split("");
+			this.lettersArray.push(chosenWord.split(""));
+		};
+		// for (var i = 0; i<array.length; i++){
+		// 	lettersArray.push( new Letter(array[i]));
+		// }
+		// return lettersArray;
+	
+		this.getWord = function(){
+		//loop through array
 		//call displayValue function on each letter
 		//concatonate those letters together into one string
-		var strWord;
-		var step;
-		var str = ""
-for (var i = 0; i<this.letters.length; i++){
- str += this.letters[i].displayValue;
+		for(var i = 0; i<this.lettersArray[0].length; i++) {
+			var str = new Letter(this.lettersArray[0][i]);
+			this.array.push(str);
+			};
+		for(var i = 0; i<this.lettersArray[0].length;i++){
+			this.splitArray.push(this.array[i].userSees);
+		};
+		}; 
 
-} 
-return str;
- //var randomWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
-}
-this.getWordDashes = function(){
-		var wordDashes = this.getWord();
-		var wordLength = wordDashes.length;
-		var newString = "";
-		for (var i = 0; i<wordLength; i++) {
-			newString += "_"
-		}
-		console.log(newString);
+		this.objectCheck = function(letter){
+			for (var i = 0; i<this.lettersArray[0].length; i++){
+				this.array[i].guessing(letter);
+			};
+
+		this.splitArray = [];
+
+		for (var i=0; i<this.lettersArray[0].length; i++){
+			this.splitArray.push(this.array[i].userSees);
+		};
+		};
+		// this.getWordDashes = function(){
+		// var wordDashes = this.getWord();
+		// var wordLength = wordDashes.length;
+		// var newString = "";
+		// for (var i = 0; i<wordLength; i++) {
+		// 	newString += "_"
+		// }
+		// console.log(newString);
 		//newString = newString + "_"
 		//get the random word
 		//find the length of the word
 		//create a new string
 		//for each letter in the world, add a dash to the new string
-	}
+	};
   //loops through word list
-}
+
 
 module.exports = Word;
 		//loop through letters

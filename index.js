@@ -1,21 +1,21 @@
 var Word = require("./word.js");
-
+var inquirer = require('inquirer');
 var wordOptions = ["love", "joy", "peace", "patience",
  "kindness", "goodness", "faithfulness",
- "gentleness", "selfcontrol"];
+ "gentleness", "self control"];
  
  var chosenWord = wordOptions[Math.floor(Math.random()*wordOptions.length)];
 
  var newWord = new Word(chosenWord)
  //console.log(chosenWord);
-newWord.getWordDashes();
+newWord.splitFunction();
 
 
  var letterGuess =  {
  	name: "letterGuessed",
 	message: "Guess a letter."}
 
-var inquirer = require('inquirer');
+
 inquirer.prompt([letterGuess]).then(answers => {
 	console.log(answers.letterGuessed);
     
