@@ -14,7 +14,7 @@ var Word =function(chosenWord) {
 
 		this.splitFunction = function(chosenWord){
 			//var random = chosenWord.split("");
-			this.lettersArray.push(chosenWord.split(""));
+		this.lettersArray.push(chosenWord.split(""));
 		};
 		// for (var i = 0; i<array.length; i++){
 		// 	lettersArray.push( new Letter(array[i]));
@@ -36,7 +36,7 @@ var Word =function(chosenWord) {
 
 		this.objectCheck = function(letter){
 			for (var i = 0; i<this.lettersArray[0].length; i++){
-				this.array[i].guessing(letter);
+				this.array[i].guessing(value);
 			};
 
 		this.splitArray = [];
