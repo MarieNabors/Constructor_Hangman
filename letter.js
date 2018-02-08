@@ -8,29 +8,34 @@
 // 			return
 // 		}
 // 	checkGuess: function(letterGuessed){
-// if letterGuessed ===value 
-// 	hasBeenGuesed===true
+// if letterGuessed === value 
+// 	hasBeenGuesed === true
 //make a new constructor for each letter
 
 
 var Letter = function(partOfWord) {
 	this.value = partOfWord;
-	this.hasBeenGuessed = false;
+	this.hasBeenGuessed = partOfWord;
 	this.displayValue = function(){
-		if hasBeenGuessed = letterGuess;
-			return value;
+		// //if (this.hasBeenGuessed == letterGuess) {
+		// 	return value;
+		// }
+		// else {
+		//  return("-")
+		console.log(partOfWord);
+		return partOfWord;
 	};
-		else {
-		 return("-")
+		
 	this.checkGuess = function(letterGuess){
-		if letterGuess = value;
-		hasBeenGuess = true 
+		if (letterGuess == value){
+		this.hasBeenGuessed = true 
+		return value
 		}
+
 	}
 
 
 	};
 
-module.exports(Letter);
 
-
+module.exports = Letter;
