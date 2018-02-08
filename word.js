@@ -12,9 +12,9 @@ var Word =function(chosenWord) {
 		//chosenWord.split("");
 		this.splitArray = [];
 
-		this.splitFunction = function(chosenWord){
+		this.splitFunction = function(newWord){
 			//var random = chosenWord.split("");
-		this.lettersArray.push(chosenWord.split(""));
+		this.lettersArray.push(newWord.split(""));
 		};
 		// for (var i = 0; i<array.length; i++){
 		// 	lettersArray.push( new Letter(array[i]));
@@ -36,7 +36,7 @@ var Word =function(chosenWord) {
 
 		this.objectCheck = function(letter){
 			for (var i = 0; i<this.lettersArray[0].length; i++){
-				this.array[i].guessing(value);
+				this.array[i].checkGuess(value);
 			};
 
 		this.splitArray = [];
